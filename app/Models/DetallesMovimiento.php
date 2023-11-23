@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Producto extends Model
+class DetallesMovimiento extends Model
 {
     use HasFactory;
 
-    protected $table = 'productos';
-    protected $primaryKey = 'id_producto';
+    protected $table = 'detalles_movimientos';
+    protected $primaryKey = 'id_detalle_movimiento';
     public $incrementing = true;
     /**
      * The attributes that are mass assignable.
@@ -18,12 +18,11 @@ class Producto extends Model
      * @var array
      */
     protected $fillable = [
+        'costo_unitario_previo',
+        'costo_unitario_actual',
         'nombre',
-        'costo_unitario',
-        'existencia',
-        'codigo',
-        'saldo', 
-        'status',
+        'key_producto',
+        'unidades', 
         'updated_at',
     ];
 

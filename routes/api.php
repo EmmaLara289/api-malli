@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\userController;
+use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\detallesMovientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/createProducto', [productosController::class, 'createProducto']);
+
+Route::post('/createDetalleMovimiento', [detallesMovientoController::class, 'createDetalleMovimiento']);

@@ -28,10 +28,11 @@ unidades //
         */
         Schema::create('productos', function (Blueprint $table) {
             $table->increments('id_producto');
-            $table->integer('costo_unitario');
+            $table->string('nombre');
+            $table->float('costo_unitario');
             $table->integer('existencia');
             $table->string('codigo');
-            $table->integer('saldo');
+            $table->float('saldo');
             $table->integer('status');
             $table->dateTime('created_at')->nullable('false');
             $table->dateTime('updated_at')->nullable('false');

@@ -21,8 +21,8 @@ unidades //
     {
         Schema::create('detalles_movimientos', function (Blueprint $table) {
             $table->increments('id_detalle_moviento');
-            $table->integer('costo_unitario_previo');
-            $table->integer('costo_unitario_actual');
+            $table->float('costo_unitario_previo');
+            $table->float('costo_unitario_actual');
             $table->string('nombre');
             $table->integer('key_producto');
             $table->integer('unidades');
