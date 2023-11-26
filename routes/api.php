@@ -24,3 +24,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/createProducto', [productosController::class, 'createProducto']);
 
 Route::post('/createDetalleMovimiento', [detallesMovientoController::class, 'createDetalleMovimiento']);
+
+Route::get('/getProductosVenta', [detallesMovientoController::class, 'getProductosVenta']);
